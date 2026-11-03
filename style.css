@@ -1,0 +1,93 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* Page 3: Scrollable layout with background image */
+body.scrollable-page {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 1rem;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Corner transparent message */
+.corner-note {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.35); /* Semi-transparent text */
+    max-width: 320px;
+    text-align: right;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+/* Standard terminal box */
+.terminal-box {
+    border: 1px solid #333333;
+    padding: 2rem;
+    background-color: #0a0a0a;
+    border-radius: 4px;
+    max-width: 450px;
+    width: 100%;
+}
+
+/* Extended tall box for page 3 */
+.terminal-box.long-box {
+    min-height: 700px; /* Makes the box longer down to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.45); /* Highly transparent to show background clearly */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.scroll-space {
+    flex-grow: 1;
+}
+
+.small-title {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
+}
+
+.code-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 0.5rem 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.code-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
